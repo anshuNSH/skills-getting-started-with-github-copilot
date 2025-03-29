@@ -41,6 +41,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Function to add participant information to activity cards
+function addParticipantInfo(activities) {
+  activities.forEach(activity => {
+      activity.participant = "John Doe"; // Replace with actual participant data
+  });
+}
+
+// Existing code to render activities
+const activities = getActivities();
+addParticipantInfo(activities);
+renderActivities(activities);
+
   // Handle form submission
   signupForm.addEventListener("submit", async (event) => {
     event.preventDefault();
